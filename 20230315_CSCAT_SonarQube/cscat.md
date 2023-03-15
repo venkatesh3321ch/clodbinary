@@ -50,6 +50,19 @@ $ aws ec2 run-instances \
     - Install Docker on Ubuntu Server
 
         $ sudo apt-get update 
+
+        # Setup Hostname
+        sudo hostnamectl set-hostname "sonarqube.cloudbinary.io"
+
+        # Update the hostname part of Host File
+        echo "`hostname -I | awk '{ print $1 }'` `hostname`" >> /etc/hosts
+
+        # Update Ubuntu Repository
+        sudo apt-get update
+
+        # Download, & Install Utility Softwares
+        sudo apt-get install git wget unzip zip curl tree -y
+
         $ sudo apt-get install docker.io -y
 
 
@@ -102,3 +115,17 @@ $ aws ec2 run-instances \
     - Start a SonarQube container with persistent data storage.
 
         $ docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 -v sonarqube-conf:/sonarqube/conf -v sonarqube-data:/sonarqube/data -v sonarqube-logs:/sonarqube/logs -v sonarqube-extensions:/sonarqube/extensions sonarqube
+
+        
+#### To Allow Normal User to Access Docker Images
+    
+    STEP-1: 
+        $  sudo groupadd docker
+    
+    STEP-2:
+        $ sudo usermod -aG docker $USER
+    
+    STEP-3:
+        $ sudo chown root:docker /var/run/docker.sock
+
+    Note: OPTIONAL = $ sudo setfacl -m user:$USER:rw /var/run/docker.sock
