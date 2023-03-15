@@ -22,6 +22,16 @@
 
 #### Provision a Linux Machine - Ubuntu
 
+#### Prerequisites:
+    
+    - Ubuntu 22.04 LTS with minimum 2GB RAM and 1 CPU.
+    
+    - PostgreSQL Version 9.3 or higher
+    
+    - SSH access with sudo privileges
+    
+    - Firewall Port: 9000
+    
 # Canonical, Ubuntu, 22.04 LTS, amd64 jammy image build on 2023-02-08 | ami-0557a15b87f6559cf
 
 $ aws ec2 run-instances \
