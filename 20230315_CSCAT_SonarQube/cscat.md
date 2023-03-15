@@ -32,8 +32,9 @@
     
     - Firewall Port: 9000
     
-# Canonical, Ubuntu, 22.04 LTS, amd64 jammy image build on 2023-02-08 | ami-0557a15b87f6559cf
+#### Canonical, Ubuntu, 22.04 LTS, amd64 jammy image build on 2023-02-08 | ami-0557a15b87f6559cf
 
+```
 $ aws ec2 run-instances \
 --image-id "ami-0557a15b87f6559cf" \
 --count 1 \
@@ -42,7 +43,7 @@ $ aws ec2 run-instances \
 --security-group-ids "sg-09e7a75b97f33d7f1" \
 --subnet-id "subnet-00a07bb8fefdfcfec" \
 --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=8am-Sonarqube},{Key=Environment,Value=dev}]'
-
+```
 
 
 #### Hands-On :
@@ -129,3 +130,38 @@ $ aws ec2 run-instances \
         $ sudo chown root:docker /var/run/docker.sock
 
     Note: OPTIONAL = $ sudo setfacl -m user:$USER:rw /var/run/docker.sock
+
+
+#### To configure Crontab for Docker Service
+
+    - Write Shell Script 
+
+```
+#!/bin/bash
+CONTAINER_NAME="my_container"
+if [ "$(docker ps -q -f name=$CONTAINER_NAME)" ]; then
+    echo "Container is running."
+else
+    echo "Container is not running. Starting..."
+    docker start $CONTAINER_NAME
+fi
+```
+
+    - Create A file on Linux and Change the file permissions:
+        $ touch docker-check.sh
+
+        $ chmod +x docker-check.sh
+
+        $ Copy Above Script and Add to the file:
+            $ vi docker-check.sh
+
+    - Configure Crontab:
+        $ crontab -l
+
+        $ crontab -e
+
+        ```
+            */5 * * * * /path/to/docker-check.sh >> /var/log/docker-check.log 2>&1
+
+        ```
+        $ crontab -l
