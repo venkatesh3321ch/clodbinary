@@ -1,3 +1,6 @@
+#### Session Video:
+    https://s3.amazonaws.com/kesavkummari.aws/8am_AWSDevOps20230207/20230316_CBRT-JFROG/video1765014433.mp4
+
 #### JFROG 
 
     - JFrog Artifactory is a powerful and scalable binary repository manager developed by JFrog. 
