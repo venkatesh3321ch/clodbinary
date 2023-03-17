@@ -1,3 +1,18 @@
+#### Session Video:
+    https://s3.amazonaws.com/kesavkummari.aws/8am_AWSDevOps20230207/20230317_CM_Ansible-1/video1957611991.mp4
+
+#### Example Playbooks
+
+    Syntax Check:
+        $ ansible-playbook --syntax-check web.yml
+
+
+    Preview a Playbook:
+        $ ansible-playbook --check web.yml
+
+
+    Execute a Playbook:
+        $ ansible-playbook web.yml
 
 #### STEP-1 : Launch 2 EC2 Instance i.e. Ubuntu
 
