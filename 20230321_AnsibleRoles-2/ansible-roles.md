@@ -172,6 +172,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 ```
 
 ```
+# Ansible - Variables
 ---
 - name: We are exploring unto Ansible Variables
   hosts: web
@@ -201,6 +202,8 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 ```
 
 ```
+# Register Variables
+
 - name: Register Variable Example 
   hosts: web
   become: true 
@@ -226,6 +229,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 ```
 
 ```
+# Coopy a File From Ansible Controller To Ansible Nodes
 ---
 - name: Copy a File From Ansible Controller To Ansible Node-1
   hosts: node-1
@@ -242,6 +246,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 
 
 ```
+# Ansible MySQL Playbook
 ---
 - name: Install and configure MySQL
   hosts: db_servers
@@ -298,7 +303,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
     You can modify this playbook to suit your specific requirements, such as changing the database and user names or specifying different privileges for the user.
 
 ```
-
+# Ansible Apache HTTP Playbook
 ---
 - name: Install and configure Apache HTTP server
   hosts: web_servers
@@ -360,6 +365,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 #### Here is an example of an Ansible playbook for installing and configuring the Apache HTTP server (apache2) on a remote host:
 
 ```
+# Ansible Apache2 Playbook
 ---
 - name: Install and configure Apache2
   hosts: web_servers
@@ -423,6 +429,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 #### An Ansible playbook for setting up Jenkins might look something like this:
 
 ```
+# Ansible Jenkins Playbook
 ---
 - name: Install Jenkins
   hosts: jenkins
@@ -459,6 +466,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 #### An Ansible playbook for setting up Tomcat might look something like this:
 
 ```
+# Ansible Apache Tomcat Playbook
 ---
 - name: Install Tomcat
   hosts: tomcat
@@ -520,6 +528,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 #### Here's an example Ansible playbook for installing and configuring Sonarqube:
 
 ```
+# Ansible Sonarqube Playbook
 ---
 - hosts: sonarqube_server
   become: yes
@@ -588,6 +597,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 #### Here's an example Ansible playbook for installing and configuring Jfrog:
 
 ```
+# Ansible Jfrog Playbook
 ---
 - hosts: artifactory_server
   become: yes
@@ -638,6 +648,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 #### Jfrog OSS
 
 ```
+# Ansible Jfrog OSS Playbook
 ---
 - hosts: jfrog_server
   become: yes
