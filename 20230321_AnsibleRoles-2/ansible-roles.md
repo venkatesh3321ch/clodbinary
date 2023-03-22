@@ -295,7 +295,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
           - Create a database named mydatabase using the mysql_db module.
           - Create a user named myuser and grant it privileges to the mydatabase database using the mysql_user module.
 
-    You can modify this playbook to suit your specific requirements, such as changing the database and user names or specifying different privileges for the user.
+      You can modify this playbook to suit your specific requirements, such as changing the database and user names or specifying different privileges for the user.
 
 #### Ansible Apache HTTP Playbook
 ```
@@ -353,7 +353,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
   
     - The handlers section includes a handler that restarts the Apache HTTP server using the systemd module when triggered.
 
-  Note that the example uses the yum package manager for installing the Apache HTTP server on a Red Hat-based system. If you're using a different package manager, you'll need to adjust the yum module to use the appropriate package manager. Additionally, the example assumes that you have a template file httpd.conf.j2 that contains the Apache HTTP server configuration. You'll need to create this file with the appropriate configuration settings for your environment.
+    Note that the example uses the yum package manager for installing the Apache HTTP server on a Red Hat-based system. If you're using a different package manager, you'll need to adjust the yum module to use the appropriate package manager. Additionally, the example assumes that you have a template file httpd.conf.j2 that contains the Apache HTTP server configuration. You'll need to create this file with the appropriate configuration settings for your environment.
 
 
 #### Here is an example of an Ansible playbook for installing and configuring the Apache HTTP server (apache2) on a remote host:
@@ -416,7 +416,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 
     - The handlers section includes a handler that restarts the Apache2 server using the systemd module when triggered.
 
-  - Note that the example uses the apt package manager for installing the Apache2 server on an Ubuntu-based system. If you're using a different package manager, you'll need to adjust the apt module to use the appropriate package manager. Additionally, the example assumes that you have a template file apache2.conf.j2 that contains the Apache2 configuration. You'll need to create this file with the appropriate configuration settings for your environment.
+    - Note that the example uses the apt package manager for installing the Apache2 server on an Ubuntu-based system. If you're using a different package manager, you'll need to adjust the apt module to use the appropriate package manager. Additionally, the example assumes that you have a template file apache2.conf.j2 that contains the Apache2 configuration. You'll need to create this file with the appropriate configuration settings for your environment.
 
 
 #### An Ansible playbook for setting up Jenkins might look something like this:
