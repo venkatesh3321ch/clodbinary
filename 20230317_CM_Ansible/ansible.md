@@ -71,7 +71,7 @@
     
     - All four tools are idempotent and have strong community support, but Ansible is considered easier to learn compared to Puppet, Chef, and Saltstack.
 
-#### 
+#### Key Things Of Ansible
     1. Ansible is an open-source automation platform that enables users to configure systems, deploy applications, and orchestrate more advanced IT tasks such as continuous deployments or zero downtime rolling updates.
 
     2. Ansible uses an easy-to-learn language called YAML to write playbooks, which are declarative files that define the desired state of a system.
