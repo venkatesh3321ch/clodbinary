@@ -152,9 +152,10 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
         $ ansible <hostname> -m service -a "name=<service-name> state=restarted"
 
 
-    STEP-6 : Write Playbooks
+   
 
 ```
+#  STEP-6 : Write Playbooks
 ---
 - name: Create a User
   hosts: web
