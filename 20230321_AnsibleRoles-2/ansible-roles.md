@@ -128,7 +128,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 
         ```
 
-    STEP-5 : Validate the Connection between Ansible Controller and Nodes:
+####    STEP-5 : Validate the Connection between Ansible Controller and Nodes:
 
         - Ping a Node :
         $ ansible <hostname> -m ping
@@ -153,9 +153,8 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 
 
    
-
+####  STEP-6 : Write Playbooks
 ```
-#  STEP-6 : Write Playbooks
 ---
 - name: Create a User
   hosts: web
@@ -171,8 +170,8 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 
 ```
 
+#### Ansible - Variables
 ```
-# Ansible - Variables
 ---
 - name: We are exploring unto Ansible Variables
   hosts: web
@@ -200,10 +199,9 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 ...
 
 ```
-
+#### Register Variables
 ```
-# Register Variables
-
+---
 - name: Register Variable Example 
   hosts: web
   become: true 
@@ -227,9 +225,8 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
       name: kesav
 
 ```
-
+#### Coopy a File From Ansible Controller To Ansible Nodes
 ```
-# Coopy a File From Ansible Controller To Ansible Nodes
 ---
 - name: Copy a File From Ansible Controller To Ansible Node-1
   hosts: node-1
@@ -244,9 +241,8 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 
 ```
 
-
+#### Ansible MySQL Playbook
 ```
-# Ansible MySQL Playbook
 ---
 - name: Install and configure MySQL
   hosts: db_servers
@@ -288,8 +284,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 
 
 ```
-####
-    In this playbook:
+#### In this playbook:
 
       - hosts specifies the target hosts where MySQL will be installed and configured.
       - become is used to elevate privileges to run commands with root privileges.
@@ -302,8 +297,8 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 
     You can modify this playbook to suit your specific requirements, such as changing the database and user names or specifying different privileges for the user.
 
+#### Ansible Apache HTTP Playbook
 ```
-# Ansible Apache HTTP Playbook
 ---
 - name: Install and configure Apache HTTP server
   hosts: web_servers
@@ -344,8 +339,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
         state: restarted
 
 ```
-#### 
-  In this playbook:
+#### In this playbook:
 
     - hosts specifies the target hosts where the Apache HTTP server will be installed and configured.
     
@@ -406,8 +400,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 
 
 ```
-
-  - In this playbook:
+#### In this playbook:
     - hosts specifies the target hosts where the Apache HTTP server will be installed and configured.
 
     - become is used to elevate privileges to run commands with root privileges.
@@ -580,7 +573,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 
 ```
 
-#### 
+#### In this playbook
 
     In this playbook, we first install Java, then download and extract the Sonarqube archive. Next, we create a directory for Sonarqube and extract the archive into it.
     
@@ -643,10 +636,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
 
 
 ```
-
-
 #### Jfrog OSS
-
 ```
 # Ansible Jfrog OSS Playbook
 ---
@@ -698,6 +688,7 @@ aws ec2 run-instances --image-id "ami-0c9978668f8d55984" --count 1 --instance-ty
         state: restarted
 
 ```
+#### In this Playbook:
 
   - In this playbook, we first install Java, then download and extract the JFrog Artifactory archive. Next, we create a directory for Artifactory and extract the archive into it. 
   
