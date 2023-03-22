@@ -54,8 +54,8 @@
 | Agentless	| No	| No | Yes | Yes |
 | Agent-based	| Yes | Yes | No | No |
 | Configuration as Code	| Yes | Yes | Yes | Yes |
-| Push-based	| Yes | Yes | Yes | Yes |
-| Pull-based	| No | No | Yes	| No |
+| Push-based	| No | No | Yes | Yes |
+| Pull-based	| Yes | Yes | No	| No |
 | Idempotent	| Yes | Yes | Yes | Yes |
 | Easy to Learn	| No | No | No | Yes |
 | Community Support	| Yes | Yes | Yes |	Yes |
@@ -71,6 +71,16 @@
     
     - All four tools are idempotent and have strong community support, but Ansible is considered easier to learn compared to Puppet, Chef, and Saltstack.
 
+#### 
+    1. Ansible is an open-source automation platform that enables users to configure systems, deploy applications, and orchestrate more advanced IT tasks such as continuous deployments or zero downtime rolling updates.
+
+    2. Ansible uses an easy-to-learn language called YAML to write playbooks, which are declarative files that define the desired state of a system.
+
+    3. Ansible Tower is the commercial version of Ansible, which provides a web-based interface, REST API, and CLIs for managing and monitoring Ansible tasks.
+
+    4. Ansible can be used to configure and manage servers, network devices, and cloud services, as well as to deploy applications and orchestrate complex IT workflows.
+
+    5. Ansible is agentless, meaning it does not require any additional software to be installed on the managed nodes.
 
 #### Example Playbooks
 
