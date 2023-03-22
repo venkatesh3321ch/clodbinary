@@ -56,7 +56,7 @@
 | Configuration as Code	| Yes | Yes | Yes | Yes |
 | Push-based	| Yes | Yes | Yes | Yes |
 | Pull-based	| No | No | Yes	| No |
-| Idempotent	| Yes | Yes	Yes | Yes |
+| Idempotent	| Yes | Yes | Yes | Yes |
 | Easy to Learn	| No | No | No | Yes |
 | Community Support	| Yes | Yes | Yes |	Yes |
 
