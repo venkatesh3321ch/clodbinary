@@ -44,7 +44,8 @@
     
     - This allows Ansible to be used for managing both on-premises and cloud-based systems.
 
-
+    - https://devopsbootcamp.osuosl.org/configuration-management.html#id3
+    
 #### Here's a table comparing Puppet, Chef, Saltstack, and Ansible based on their table output features:
 
 | Feature | Puppet | Chef | Saltstack | Ansible |
@@ -52,10 +53,10 @@
 | Declarative	| Yes | Yes | Yes | Yes |
 | Imperative	| No | Yes | Yes | Yes |
 | Agentless	| No	| No | Yes | Yes |
-| Agent-based	| Yes | Yes | No | No |
+| Agent-based	| Yes | Yes | Yes | No |
 | Configuration as Code	| Yes | Yes | Yes | Yes |
-| Push-based	| No | No | Yes | Yes |
-| Pull-based	| Yes | Yes | No	| No |
+| Push-based	| Yes | Yes | No | Yes |
+| Pull-based	| No | No | Yes	| No |
 | Idempotent	| Yes | Yes | Yes | Yes |
 | Easy to Learn	| No | No | No | Yes |
 | Community Support	| Yes | Yes | Yes |	Yes |
